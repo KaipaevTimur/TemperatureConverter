@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzZ-kR-bys">
+                                <rect key="frame" x="20" y="63" width="224" height="36"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7A-8H-Z2P">
+                                <rect key="frame" x="182" y="338" width="50" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkW-iC-ir9">
+                                <rect key="frame" x="184.5" y="634" width="45" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pRv-37-WMs">
+                                <rect key="frame" x="82.5" y="487" width="249" height="30"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="WSq-rW-rDX"/>
+                                    <constraint firstAttribute="height" constant="29" id="i1b-Bg-0O6"/>
+                                </constraints>
+                                <color key="thumbTintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WSq-rW-rDX"/>
+                                        <exclude reference="i1b-Bg-0O6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="WSq-rW-rDX"/>
+                                        <include reference="i1b-Bg-0O6"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mmb-uE-CWL"/>
+                                </connections>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lake" translatesAutoresizingMaskIntoConstraints="NO" id="PJK-O0-EHg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pRv-37-WMs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0Uw-D1-IG9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pRv-37-WMs" secondAttribute="trailing" constant="84.5" id="BZe-jg-ZfP"/>
+                            <constraint firstItem="PJK-O0-EHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EMy-xh-MN8"/>
+                            <constraint firstItem="g7A-8H-Z2P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KHF-Qo-gVK"/>
+                            <constraint firstItem="jzZ-kR-bys" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="MKv-Qp-uJA"/>
+                            <constraint firstItem="pRv-37-WMs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84.5" id="XDu-kM-U9f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="PJK-O0-EHg" secondAttribute="top" constant="44" id="aZQ-k7-Sbc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PJK-O0-EHg" secondAttribute="trailing" id="av0-RM-UEb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pRv-37-WMs" secondAttribute="bottom" constant="346" id="dpt-Wc-Mvc"/>
+                            <constraint firstItem="wkW-iC-ir9" firstAttribute="top" secondItem="pRv-37-WMs" secondAttribute="bottom" constant="118" id="mDP-jZ-qxP"/>
+                            <constraint firstItem="jzZ-kR-bys" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mv1-mU-lLY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jzZ-kR-bys" secondAttribute="trailing" constant="170" id="q6H-ae-Vxa"/>
+                            <constraint firstItem="wkW-iC-ir9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tKQ-Tu-Nr0"/>
+                            <constraint firstItem="PJK-O0-EHg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="xL2-m3-ZDG"/>
+                            <constraint firstItem="pRv-37-WMs" firstAttribute="top" secondItem="g7A-8H-Z2P" secondAttribute="bottom" constant="113" id="yCr-ve-gx8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EMy-xh-MN8"/>
+                                <exclude reference="xL2-m3-ZDG"/>
+                                <exclude reference="BZe-jg-ZfP"/>
+                                <exclude reference="aZQ-k7-Sbc"/>
+                                <exclude reference="av0-RM-UEb"/>
+                                <exclude reference="dpt-Wc-Mvc"/>
+                                <exclude reference="q6H-ae-Vxa"/>
+                                <exclude reference="MKv-Qp-uJA"/>
+                                <exclude reference="mv1-mU-lLY"/>
+                                <exclude reference="KHF-Qo-gVK"/>
+                                <exclude reference="0Uw-D1-IG9"/>
+                                <exclude reference="XDu-kM-U9f"/>
+                                <exclude reference="yCr-ve-gx8"/>
+                                <exclude reference="mDP-jZ-qxP"/>
+                                <exclude reference="tKQ-Tu-Nr0"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="EMy-xh-MN8"/>
+                                <include reference="xL2-m3-ZDG"/>
+                                <include reference="BZe-jg-ZfP"/>
+                                <include reference="aZQ-k7-Sbc"/>
+                                <include reference="av0-RM-UEb"/>
+                                <include reference="dpt-Wc-Mvc"/>
+                                <include reference="q6H-ae-Vxa"/>
+                                <include reference="MKv-Qp-uJA"/>
+                                <include reference="mv1-mU-lLY"/>
+                                <include reference="KHF-Qo-gVK"/>
+                                <include reference="0Uw-D1-IG9"/>
+                                <include reference="XDu-kM-U9f"/>
+                                <include reference="yCr-ve-gx8"/>
+                                <include reference="mDP-jZ-qxP"/>
+                                <include reference="tKQ-Tu-Nr0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cenliusLabel" destination="g7A-8H-Z2P" id="pZl-Um-fIR"/>
+                        <outlet property="fahrenheitLabel" destination="wkW-iC-ir9" id="AWO-Zk-7fQ"/>
+                        <outlet property="slider" destination="pRv-37-WMs" id="jqm-0e-Rez"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.840579710144929" y="62.276785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lake" width="2700" height="3840"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
